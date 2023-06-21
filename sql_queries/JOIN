@@ -1,0 +1,17 @@
+--JOIN statement to combine tables
+
+-- mn_advertiser_weekly_spend tables created using the advertiser_ids identified as geo-targeting Minnesota
+SELECT a.week_start_date,
+    EXTRACT (WEEK FROM a.week_start_date) AS week_of_year,
+    COUNT(a.advertiser_id) AS total_ads,
+    a.advertiser_name,
+    a.advertiser_id,
+    SUM(a.spend_usd) AS total_weekly_spend,
+    SUM(a.spend_usd)/COUNT(a.advertiser_id) AS spend_per_ad
+FROM `bigquery-public-data.google_political_ads.advertiser_weekly_spend` a
+JOIN `capstone-advertising-dataset.advertiser_data.mn_creative_stats_2022` m
+    ON a.advertiser_id = m.advertiser_id
+WHERE a.week_start_date BETWEEN '2022-01-01' AND '2022-09-30'
+AND a.spend_usd IS NOT NULL
+GROUP BY week_start_date, week_of_year, a.advertiser_name, a.advertiser_id
+ORDER BY week_of_year
