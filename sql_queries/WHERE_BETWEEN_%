@@ -1,0 +1,9 @@
+--Filtering data using WHERE and BETWEEN statements and wildcard
+
+-- Limiting geo_targeting_included to Minnesota cities, counties, zip codes
+SELECT *
+FROM `bigquery-public-data.google_political_ads.creative_stats`
+WHERE date_range_start BETWEEN '2022-01-01' AND '2022-09-22'
+AND regions = 'US' AND geo_targeting_included LIKE '%Minnesota%'
+AND char_length (geo_targeting_included) <= 193
+ORDER BY date_range_start
