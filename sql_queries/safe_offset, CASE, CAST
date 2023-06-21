@@ -1,0 +1,29 @@
+--Changing impressions data type from string to integer format, assigning value for NULL impressions_max
+
+WITH mn_impressions_int AS
+(SELECT date_range_start
+,EXTRACT(WEEK FROM date_range_start) AS week_of_year
+,EXTRACT(DAYOFWEEK FROM date_range_start) AS day_of_week
+,advertiser_id
+,advertiser_name
+,geo_targeting_included
+,regions
+,num_of_days
+,SPLIT (impressions, "-")[safe_offset(0)] AS impressions_min
+,SPLIT (impressions, "-")[safe_offset(1)] AS impressions_max
+,gender_targeting
+,age_targeting
+,ad_type
+FROM `bigquery-public-data.google_political_ads.creative_stats`
+WHERE date_range_start BETWEEN '2018-01-01' AND '2018-11-07'
+AND regions = 'US'
+AND geo_targeting_included LIKE '%Minnesota%'
+AND char_length (geo_targeting_included) <= 193
+ORDER BY date_range_start)
+
+SELECT *
+CASE WHEN impressions_max IS NULL THEN 10001000
+WHEN impressions_max IS NOT NULL THEN CAST (impressions_max AS INT64)
+END impressions_max_int
+FROM mn_impressions_int
+ORDER BY week_of_year
