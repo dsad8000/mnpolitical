@@ -1,5 +1,6 @@
---Changing impressions data type from string to integer format, assigning value for NULL impressions_max
+--Changing data type of column, addressing NULL values using CASE and CAST statements
 
+--Changing impressions from string to integer format, assigning value for NULL impressions_max
 WITH mn_impressions_int AS
 (SELECT date_range_start
 ,EXTRACT(WEEK FROM date_range_start) AS week_of_year
