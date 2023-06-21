@@ -18,13 +18,17 @@ The project was a self-designed capstone project to complete the Coursera Google
 [bigquery-public-data.google_political_ads](https://console.cloud.google.com/bigquery?_ga=2.2789936.1651045075.1687355687-572369547.1687355687&_gac=1.215615205.1687355689.CjwKCAjwv8qkBhAnEiwAkY-ahgGIt8TucK1x6-L3ePvmhdMDs3TFFhemhcc6rB5A_YmQe0z_D0LsNxoCbe0QAvD_BwE&pli=1&project=capstone-advertising-dataset&ws=!1m4!1m3!3m2!1sbigquery-public-data!2sgoogle_political_ads)
 
 ## Analysis and Results
-[Sample SQL Queries]
+[Sample SQL Queries](https://github.com/dsad8000/mnpolitical/tree/main/sql_queries)
 
-![image](https://github.com/dsad8000/mnpolitical/assets/98616377/083a80e2-7d6f-40d8-a661-f254cc515b21)
-![image](https://github.com/dsad8000/mnpolitical/assets/98616377/b6730322-d8e0-4b97-a634-f60b96327040)
-![image](https://github.com/dsad8000/mnpolitical/assets/98616377/1deb336f-0335-4aa5-af15-a47b38e18269)
-![image](https://github.com/dsad8000/mnpolitical/assets/98616377/f3375f0f-008b-472e-b355-d66f0d17b77c)
-![image](https://github.com/dsad8000/mnpolitical/assets/98616377/3328d94f-fa72-4fb2-ab9b-cb6df4ae12e8)
+<kbd>![image](https://github.com/dsad8000/mnpolitical/assets/98616377/083a80e2-7d6f-40d8-a661-f254cc515b21)<kbd>
+
+<kbd>![image](https://github.com/dsad8000/mnpolitical/assets/98616377/b6730322-d8e0-4b97-a634-f60b96327040)<kbd>
+
+<kbd>![image](https://github.com/dsad8000/mnpolitical/assets/98616377/1deb336f-0335-4aa5-af15-a47b38e18269)<kbd>
+
+<kbd>![image](https://github.com/dsad8000/mnpolitical/assets/98616377/f3375f0f-008b-472e-b355-d66f0d17b77c)<kbd>
+
+<kbd>![image](https://github.com/dsad8000/mnpolitical/assets/98616377/3328d94f-fa72-4fb2-ab9b-cb6df4ae12e8)<kbd>
 
 ## Recommendations
 [Full report on Medium](https://danielle-sadler.medium.com/mn-political-election-ad-analysis-8175f31b8393)
